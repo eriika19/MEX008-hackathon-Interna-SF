@@ -1,0 +1,48 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+    user-select: none;
+  }
+  
+  /*
+  #list {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  */
+  /* https://vuejs.org/v2/api/#v-cloak */
+  [v-cloak] { display: none; }
+
+  .container{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+  }
+  
+  .row{
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .row:before, .row:after{
+    content:"";
+    display:table;
+  }
+  .row:after{
+    clear:both;
+  }
+  
+  
+  [class*= "col-" ]{
+    float: left;
+    min-height: 10px;
+    /* gutters */
+    padding: 12px;
+  }

@@ -1,0 +1,24 @@
+/* FUENTES
+
+font-family: 'Cookie', cursive;
+font-family: 'Quicksand', sans-serif;*/
+
+body{
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /*Header */
+
+  header{
+      font-family: 'Cookie', cursive;
+    background-color: rgba(113, 74, 255, 0.137);
+
+  }
+
+    
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cookie', cursive;
+    color: #343a40
+  }
+
+
