@@ -14,11 +14,26 @@ body{
     background-color: rgba(113, 74, 255, 0.137);
 
   }
-
+  
+  .hide {
+    display:none;
+  }
     
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cookie', cursive;
     color: #343a40
   }
 
-
+  .tex{
+    font-family:  'Cookie', cursive;
+    font-size: x-large;
+    font-weight: 800;
+    font-style: italic;
+  }
+ #input-text{
+    width: 60px;
+    height: 20px;
+    font-family:  'Cookie', cursive;
+    text-align: center;
+    
+}
