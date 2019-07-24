@@ -6,7 +6,15 @@
 
 - [Introducción](#introducción)
 - [Planteación de problema](#planteación-de-problema)
+- [Fundamentos de la solución](#fundamentos-de-la-solución)
+- [Proyecto](#proyecto)
+- [Nicho de mercado](#nicho-de-mercado)
 - [Descripcion del Proyecto](#descripción-del-proyecto)
+- [User Persona](#user-persona)
+- [Historias de Usuario](#historias-de-usuario)
+- [Heurísticas de usabilidad](#heurísticas-de-usabilidad)
+- [Funcionalidades](#funcionalidades)
+- [Modelo de Negocio](#modelo-de-negocio)
 
 ---
 
@@ -47,7 +55,7 @@ La siguiente imagen nos muestra los gastos hormiga y como afectan a nuestro bien
 
 ![](https://enconsumo.com/wp-content/uploads/2017/03/Gastos_Hormiga-800x1704.jpg)
 
-### Fundamentos de la Solución
+### Fundamentos de la solución
 
 A pesar del oscuro panorama, los expertos te aconsejan:.
 
@@ -69,7 +77,7 @@ Además de lo que se necesita se haga por parte de instituciones del sector púb
 
 Erika Soto mencionó que se debe usar la fórmula de ingreso menos ahorro es igual a gasto, y separar un porcentaje de tu ingreso de entre 15 y 25 por ciento para destinarlo al ahorro y finalmente éste dividirlo en metas, por ejemplo para pagar el coche o unas vacaciones, además comentó que entre un 10 u 8 por ciento se puede ahorrar de manera voluntaria para el retiro y que una vez que se decida cuánto se va a ahorrar se debe consultar con un asesor financiero para que nos ayude a saber invertir.
 
-#### `Importancia de la educación financiera`
+#### *Importancia de la educación financiera*
 
 La educación financiera se fundamenta en dos principios básicos: La prioridad y la generación de valor. El primero plantea y define la relevancia de las acciones financieras en función de un orden. Que va ligado a dar los primeros lugares a las necesidades, mientras que supedita los gustos y deseos a planos secundarios. Mientras que el segundo identifica oportunidades de generar riqueza.
 
@@ -93,7 +101,7 @@ Actualmente Laboratoria CDMX cuenta con 52 estudiantes y mas de 1000 egresadas, 
 
 Las estudiantes y egresadas son personas comprometidas con iniciativa de siempre aprender y mejorar su calidad de vida. Por ello elegimos desarrollar una interfaz que las ayude a planear su binestar económico.
 
-### *Descripciónd el Proyecto*
+### *Descripción del Proyecto*
 
 El proyecto esta enfocado en generar _hábitos financieros_ que apoyen a la comunidad de Laboratoria, para mejorar su calidad de vida.
 
@@ -199,7 +207,7 @@ La versión gratuita de $mart $pend ofrece:
  - Balance Financiero
  - Graficas
 
-### Suscripción Mensual
+### *Suscripción Mensual*
 
 El cliente debe pagar una cuota específica de forma recurrente: mensual, a cambio de tener acceso a nuestro servicio PREMIUM.
 
