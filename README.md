@@ -59,7 +59,7 @@ La educación financiera trata sobre cómo establecer una relación con el diner
 En ese sentido, la educación financiera busca proveer las herramientas necesarias que le permitan a la persona, grupo de ellas o empresa, tomar decisiones en base a criterios que son forjados en función de objetivos claros y enfocados a aquello que realmente  aporta valor a la gestión financiera personal.
 
 
-### Educación Financiera
+#### *Educación Financiera*
 
 Es común ver a las personas presentar dificultad en la gestión financiera a razón de que carecen de los elementos necesarios para una administración saludable del dinero. Este tipo de situaciones ha tenido como consecuencia que las personas aprenden sobre la base del ensayo y error.
 
@@ -69,7 +69,7 @@ Además de lo que se necesita se haga por parte de instituciones del sector púb
 
 Erika Soto mencionó que se debe usar la fórmula de ingreso menos ahorro es igual a gasto, y separar un porcentaje de tu ingreso de entre 15 y 25 por ciento para destinarlo al ahorro y finalmente éste dividirlo en metas, por ejemplo para pagar el coche o unas vacaciones, además comentó que entre un 10 u 8 por ciento se puede ahorrar de manera voluntaria para el retiro y que una vez que se decida cuánto se va a ahorrar se debe consultar con un asesor financiero para que nos ayude a saber invertir.
 
-#### *Importancia de la educación financiera*
+#### `Importancia de la educación financiera`
 
 La educación financiera se fundamenta en dos principios básicos: La prioridad y la generación de valor. El primero plantea y define la relevancia de las acciones financieras en función de un orden. Que va ligado a dar los primeros lugares a las necesidades, mientras que supedita los gustos y deseos a planos secundarios. Mientras que el segundo identifica oportunidades de generar riqueza.
 
@@ -81,19 +81,19 @@ Tomando esto en consideración, la educación financiera cobra importancia cuand
 
 ## Proyecto
 
-### Nicho de mercado
+### *Nicho de mercado*
 
 Las estudiantes de Laboratoria sueñan con lograr su estabilidad y/o independencia financiera. Se podrá lograr con el tiempo con su nuevo sueldo como programadora o diseñadora de experiencia.  Pero, más allá de esperar un buen salario, pocas se han sentado a planificar cómo lograr sus metas financieras y proyectar cuándo lograrlas.
 
 Al recibir una oferta de trabajo, las estudiantes/egresadas no tienen un producto que les guíe a saber lo que les quedará libre del salario ofrecido, ni tienen un producto que les guíe a planificar cómo usar ese dinero “libre” para ir construyendo su ruta hacia la independencia financiera.
 
-#### *Muestra de mercado*
+#### `Muestra de mercado`
 
 Actualmente Laboratoria CDMX cuenta con 52 estudiantes y mas de 1000 egresadas, Laboratoria una Asiciacion Civil, enfocada es generar talento Tech Femenino, Laboratoria a asumido la importancia en este tema y lo trascendente que resulta para el bienestar economico de sus estudiantes.
 
 Las estudiantes y egresadas son personas comprometidas con iniciativa de siempre aprender y mejorar su calidad de vida. Por ello elegimos desarrollar una interfaz que las ayude a planear su binestar económico.
 
-### Descripciónd el Proyecto
+### *Descripciónd el Proyecto*
 
 El proyecto esta enfocado en generar _hábitos financieros_ que apoyen a la comunidad de Laboratoria, para mejorar su calidad de vida.
 
@@ -123,7 +123,7 @@ La siguiente imagen nos ofrece una alternativa sencilla para la planeacion a med
 
 ### `User Persona`
 
-#### Cecilia Leal
+#### `Cecilia Leal`
 25 años
 Estudiante
 No tiene conocimiento sobre finanzas personales, es estudiante del bootcamp de Laboratoria
@@ -199,7 +199,7 @@ La versión gratuita de $mart $pend ofrece:
  - Balance Financiero
  - Graficas
 
-#### Suscripción Mensual
+### Suscripción Mensual
 
 El cliente debe pagar una cuota específica de forma recurrente: mensual, a cambio de tener acceso a nuestro servicio PREMIUM.
 
