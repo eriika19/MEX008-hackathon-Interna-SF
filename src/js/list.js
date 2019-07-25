@@ -1,17 +1,19 @@
 /* text input for adding item to checklist */
+let reason;
+
 Vue.component('list-input', {
     data: function() {
-      return { userInput: "" }
+      return { userInput: ""}
     },
     template: `
       <div class="item">
-        <label for="transaction"> Agregar:</label>
-        <select name="transaction" id="transaction">
+        <label for="transaction-type"> Agregar:</label>
+        <select name="transaction-type" id="transaction-type">
         <option value="gasto">Gasto</option>
         <option value="ingreso">Ingreso</option>
     </select>
-    <label for="categorie"> Categoría:</label>
-    <input id="categorie" type="text" v-model="userInput" @keydown.enter="addTodoItem"></input>
+    <label for="reason"> Razón:</label>
+    <input id="reason" type="text"  @keydown.enter="addTodoItem"></input>
     <label for="amount"> Cantidad:</label>
         <input id="amount" type="text" v-model="userInput" @keydown.enter="addTodoItem"></input>
         <div class="plus-circle-svg svg-wrapper" @click="addTodoItem">
@@ -22,8 +24,11 @@ Vue.component('list-input', {
     methods: {
       addTodoItem: function() {
         if(this.userInput !== "") {
-          this.todos.push(this.userInput);
+          reason = document.getElementById('reason')
+          this.todos.push(reason.value + ' $' + this.userInput);
           this.userInput = "";
+          reason.value = "";
+          console.log(this.todos);
         }
       }
     },
@@ -32,14 +37,15 @@ Vue.component('list-input', {
     }
   });
   
-  /* shows checklist length */
+  /* shows length array*/
   Vue.component('list-stats', {
     template: `
     <div class="item">
-      <p>Gastos: {{ todos.length }}</p>
+    <p>Ingresos: {{ todos.length }}</p> <p id="expenses">Gastos: {{ todos.length }}</p> 
     </div>`,
     props: {
       todos: Array
+
     }
   })
   
@@ -69,6 +75,7 @@ Vue.component('list-input', {
       removeItem: function(todo) {
         let trashedItemIndex = this.todos.indexOf(todo)
         this.todos.splice(trashedItemIndex, 1)
+        console.log(this.todos);
       }
     },
     props: {
@@ -79,14 +86,13 @@ Vue.component('list-input', {
   
   /* list components */
   
-  Vue.component('user-list', {
+  Vue.component('list', {
     data: function() {
       return {
-        todos: [ 'Comida', 'Transporte', 'Educación', 'Diversión']
+        todos: [ 'Comida $80', 'Transporte $20', 'Educación $150']
       }
     },
     template: `
-    <main>
       <div id="list-items-wrapper">
         <list-input :todos="todos"></list-input>
         <list-stats :todos="todos"></list-stats>
@@ -97,9 +103,21 @@ Vue.component('list-input', {
           :todos="todos"
         >
         </list-item>
-      </div>
-    </main>`
+        <balance></balance>
+      </div>`
   })
+
+  /* shows balance */
+  Vue.component('balance', {
+    template: `
+    <div class="item">
+    <p><strong>Balance:</strong> $ 400</p>
+    </div>`,
+    props: {
+      todos: Array
+    }
+  })
+
   let vm = new Vue({
     el: '#list'
   })

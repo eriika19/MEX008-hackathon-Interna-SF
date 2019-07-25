@@ -4,7 +4,6 @@
 
 /* list-item */
 
-/* any item (used by list-item, list-input, list-stats */
 .item {
   display: flex;
   flex-direction: row;
@@ -29,13 +28,11 @@
   padding-left: 9px;
 }
 
-/* List */
-
-#list-items-wrapper {
-  width: 85vw;
-  max-width: 650px;
-  min-width: 250px;
+p+p {
+  margin-left: 50%;
 }
+
+[v-cloak] { display: none; }
 
 /* ---------------------------------------------------
     SVG STYLE
