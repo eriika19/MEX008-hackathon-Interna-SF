@@ -55,8 +55,39 @@ body{
     display: none;
   }
 
+/*Start*/
+
+.name {
+text-align: center;
+align-items: center;
+padding-top: 5rem;
+}
+figure{
+  align-items: center;
+  text-align: center;
+  padding-top: 3rem;
+}
+#button-wallet{
+  box-shadow: 10px 5px 5px green;
+  border-radius: 5rem;
+}
+
+#button-wallet:hover{
+  
+  background-color: darkslategrey;
+  border-radius: 5rem;
+}
+
+/* Home */
+
  label, input, select {
     font-family: 'Quicksand', sans-serif;
+}
+
+.tex{
+  font-size: x-large;
+  font-weight: 900;
+  font-style: italic;
 }
 
 input, select {
@@ -86,7 +117,6 @@ footer p {
   text-align: center;
   font-size: 18px;
 }
-
 
 /*img*/
 
