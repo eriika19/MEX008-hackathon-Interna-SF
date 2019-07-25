@@ -1,18 +1,18 @@
 const inputName = document.getElementById('input-name');
 const buttonName = document.getElementById('button-wallet');
-const content = document.getElementById('content');
+const greet = document.getElementById('greet');
 
 
-const showSecondSection = document.getElementById('home');
-
-const hideFirstSection = document.getElementById('first-section');
-
+const firstSection = document.getElementById('first-section');
+const home = document.getElementById('home');
+const character = document.getElementById('character');
 
 
 const getName = () => { 
-    hideFirstSection.classList.add('hide');
-    showSecondSection.classList.remove('hide');
-       content.innerHTML = 'Bienvenid@ ' + inputName.value + ' empecemos a comprar con calidad y conciencia.';
-    }
+    firstSection.classList.add('hide');
+    home.classList.remove('hide');
+    character.classList.remove('hide');
+    greet.innerHTML = 'Bienvenid@ ' + inputName.value + ' empecemos a comprar con calidad y conciencia.';
+    };
 
 buttonName.addEventListener('click', () => getName());
