@@ -7,7 +7,6 @@ body{
     font-family: 'Quicksand', sans-serif;
   }
 
-  
   /* Header */
 
   header{
@@ -29,17 +28,27 @@ body{
     color: #343a40
   }
 
+  h3 {
+    font-size: 2.45em !important;
+    padding: .05em .4em !important;
+    font-weight: bold !important;
+  }
+
+  .popover-body {
+    font-size: 1.19em;
+}
+
   #logo {
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
     margin: 1em;
   }
 
-/* Main */
-  main {
+  .content {
     display: flex;
     justify-content: center;
     width: 100%;
+    transition: all 0.3s;
   }
 
   .hide {
@@ -48,19 +57,21 @@ body{
 
  label, input, select {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.1em;
 }
 
 input, select {
+  width: 60%;
   margin: 0 2em 0 0;
-  padding: 5px;
+  padding: 2px;
   border: 2px solid #ced4da;
   border-radius: 4px;
+  font-size: .98em;
 }
 
-label {    
+label {
   margin: 0 .3em 0 0;
   font-weight: bolder;
+  font-size: 1.1em;
 }
 
   /* Footer */
@@ -76,16 +87,29 @@ footer p {
   font-size: 18px;
 }
 
+
+/*img*/
+
+#piggy-bank {
+  height: 15em;
+  float: right;
+}
+
+#piggy-bank:focus {
+outline-color: transparent !important;
+}
+
 /*
-  #id{
+#add {
 color: rgba(31, 204, 126, 0.952);
     color:rgba(8, 165, 94, 0.877);
     color: rgba(65, 34, 179, 0.911);
     color: rgba(39, 204, 44, 0.918);
     color: rgba(43, 179, 47, 0.925);
+} */
 
 
-  }*/
+  
 
 
 

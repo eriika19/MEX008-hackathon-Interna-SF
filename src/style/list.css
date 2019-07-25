@@ -2,9 +2,18 @@
    LIST STYLE
 ----------------------------------------------------- */
 
+#select-transaction{
+  width: 30%;
+  display: inline-flex;
+}
+
+#amount{
+  display: inline-flex;
+  margin-right: 1.5em;
+}
+
 /* list-item */
 
-/* any item (used by list-item, list-input, list-stats */
 .item {
   display: flex;
   flex-direction: row;
@@ -29,13 +38,27 @@
   padding-left: 9px;
 }
 
-/* List */
-
-#list-items-wrapper {
-  width: 85vw;
-  max-width: 650px;
-  min-width: 250px;
+#add-input {
+  background-color: rgb(224, 224, 224);
 }
+
+#list-stats {
+  background-color: rgba(233, 236, 239, 0.712);
+}
+
+p+p {
+  margin-left: 50%;
+}
+
+#income {
+  color: rgba(31, 204, 126, 0.952);
+}
+
+#expense {
+color: rgb(219, 0, 0);
+}
+
+[v-cloak] { display: none; }
 
 /* ---------------------------------------------------
     SVG STYLE

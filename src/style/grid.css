@@ -7,17 +7,6 @@
     user-select: none;
   }
   
-  /*
-  #list {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-    background-color: #f8f9fa;
-  }
-  */
-  /* https://vuejs.org/v2/api/#v-cloak */
-  [v-cloak] { display: none; }
-
   .container{
     width: 100%;
     max-width: 1300px;
@@ -35,6 +24,7 @@
     content:"";
     display:table;
   }
+
   .row:after{
     clear:both;
   }
@@ -46,3 +36,16 @@
     /* gutters */
     padding: 12px;
   }
+
+  .col-12{width: calc(100% * 1 - 0px);}
+  .col-11{width: calc(91.66% * 1 - 0px);}
+  .col-10{width: calc(83.33% * 1 - 0px);}
+  .col-9 {width: calc(75% * 1 - 0px);}
+  .col-8 {width: calc(66.66% * 1 - 0px);} 
+  .col-7 {width: calc(58.33% * 1 - 0px);}
+  .col-6 {width: calc(50% * 1 - 0px);}
+  .col-5 {width: calc(41.66% * 1 - 0px);}
+  .col-4 {width: calc(33.33% * 1 - 0px);}
+  .col-3 {width: calc(25% * 1 - 0px);}
+  .col-2 {width: calc(16.66% * 1 - 0px);}
+  .col-1 {width: calc(8.33% * 1 - 0px);}
