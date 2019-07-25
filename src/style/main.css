@@ -28,6 +28,16 @@ body{
     color: #343a40
   }
 
+  h3 {
+    font-size: 2.45em !important;
+    padding: .05em .4em !important;
+    font-weight: bold !important;
+  }
+
+  .popover-body {
+    font-size: 1.19em;
+}
+
   #logo {
     width: 5em;
     height: 5em;
@@ -85,11 +95,8 @@ footer p {
   float: right;
 }
 
-#doggy {
-  background-color: transparent;
-
-  float: right !important;
-  border-color: transparent;
+#piggy-bank:focus {
+outline-color: transparent !important;
 }
 
 /*

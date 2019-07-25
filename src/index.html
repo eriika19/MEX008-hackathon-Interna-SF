@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <!-- Librería Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cookie|Quicksand&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/esm/popper.min.js">-->
+    <!-- Fuentes-->    
+      <link href="https://fonts.googleapis.com/css?family=Cookie|Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/grid.css">  
     <link rel="stylesheet" href="style/media.css">
     <link rel="stylesheet" href="style/list.css">
+
     <title>$mart $pend</title>
     <link rel="icon" type="image/img" href="img/logo-colors.png">
+
 </head>
 <body>
     <header>
@@ -32,9 +35,10 @@
     <section>
         <div class="row">
             <div class="col-4">
-                    <span class="" data-toggle="popover" data-content="Disabled popover">
-                    <button id="doggy" class="btn btn-primary" style="pointer-events: none;" type="button" disabled><img id="piggy-bank" src="img/pig-coin.png" alt="piggy-bank"></button>
-   </span>
+                
+   <figure id="doggy">
+        <img id="piggy-bank" src="img/pig-coin.png" alt="piggy-bank" data-toggle="popover" data-placement="right" tabindex="0" data-trigger="focus" title="Pro tip" data-content="¡Comencemos!">
+   </figure>
                 </div>
     </div>
 </section>
@@ -45,8 +49,21 @@
     <footer>
 
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/main.js"></script>
     <script src="js/list.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
 </body>
 </html>
