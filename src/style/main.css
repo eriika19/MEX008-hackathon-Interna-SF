@@ -34,6 +34,10 @@ body{
     font-weight: bold !important;
   }
 
+  h4{
+    font-size: 1.4em !important;
+  }
+
   .popover-body {
     font-size: 1.19em;
 }
@@ -57,25 +61,39 @@ body{
 
 /*Start*/
 
+#first-section {
+  margin-top: 3.1em;
+}
+
 .name {
 text-align: center;
 align-items: center;
 padding-top: 5rem;
 }
+
 figure{
   align-items: center;
   text-align: center;
   padding-top: 3rem;
 }
+
 #button-wallet{
   box-shadow: 10px 5px 5px green;
   border-radius: 5rem;
 }
 
 #button-wallet:hover{
-  
   background-color: darkslategrey;
   border-radius: 5rem;
+}
+
+#input-name {
+  height: 3em;
+  width: 38%;
+  margin-left: 1.2em;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 /* Home */
@@ -84,7 +102,7 @@ figure{
     font-family: 'Quicksand', sans-serif;
 }
 
-.tex{
+.text{
   font-size: x-large;
   font-weight: 900;
   font-style: italic;
