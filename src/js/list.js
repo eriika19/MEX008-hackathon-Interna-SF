@@ -6,16 +6,22 @@ Vue.component('list-input', {
       return { userInput: ""}
     },
     template: `
-      <div class="item">
+      <div id="add-input" class="item">
+      <div id="select-transaction">
         <label for="transaction-type"> Agregar:</label>
         <select name="transaction-type" id="transaction-type">
         <option value="gasto">Gasto</option>
         <option value="ingreso">Ingreso</option>
     </select>
+    </div>
+    <div>
     <label for="reason"> Razón:</label>
     <input id="reason" type="text"  @keydown.enter="addTodoItem"></input>
+    </div>
+    <div>
     <label for="amount"> Cantidad:</label>
         <input id="amount" type="text" v-model="userInput" @keydown.enter="addTodoItem"></input>
+        </div>
         <div class="plus-circle-svg svg-wrapper" @click="addTodoItem">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
         </div>
@@ -30,7 +36,28 @@ Vue.component('list-input', {
           reason.value = "";
           console.log(this.todos);
         }
-      }
+      },
+
+        balance: () => {
+          let valueArr = [];
+          for (let i=0; i < (this.todos).length; i++) {
+          let element = this.todos[i];
+          let values = element.split(" ");
+          for(let counter=0; counter < values.length; counter++) {
+            let item = values[counter];
+              if(!(58>item.charCodeAt(0) && item.charCodeAt(0)>47)) {continue;}
+          let value = '';
+          for (let index=0; index < item.length; index++) {
+            if(item.charCodeAt(index) == 46) {value += item[index]}
+            if (58>item.charCodeAt(index) && item.charCodeAt(index)>47) {
+            value += item[index];
+          }}
+          let num = parseFloat(value);
+          valueArr.push(num);
+          console.log(valueArr);
+        }}
+        return valueArr;
+        },
     },
     props: {
       todos: Array
@@ -40,12 +67,11 @@ Vue.component('list-input', {
   /* shows length array*/
   Vue.component('list-stats', {
     template: `
-    <div class="item">
-    <p>Ingresos: {{ todos.length }}</p> <p id="expenses">Gastos: {{ todos.length }}</p> 
+    <div id="list-stats" class="item">
+    <p id="income">Ingresos: {{ todos.length }}</p> <p id="expense">Gastos: {{ todos.length }}</p>
     </div>`,
     props: {
       todos: Array
-
     }
   })
   
@@ -90,8 +116,8 @@ Vue.component('list-input', {
     data: function() {
       return {
         todos: [ 'Comida $80', 'Transporte $20', 'Educación $150']
-      }
-    },
+      }},
+
     template: `
       <div id="list-items-wrapper">
         <list-input :todos="todos"></list-input>
@@ -109,6 +135,28 @@ Vue.component('list-input', {
 
   /* shows balance */
   Vue.component('balance', {
+
+    methods: function() {
+      let valueArr = [];
+      for (let i=0; i < this.todos.length; i++) {
+      let element = this.todos[i];
+      let values = element.split(" ");
+      for(let counter=0; counter < values.length; counter++) {
+        let item = values[counter];
+          if(!(58>item.charCodeAt(0) && item.charCodeAt(0)>47)) {continue;}
+      let value = '';
+      for (let index=0; index < item.length; index++) {
+        if(item.charCodeAt(index) == 46) {value += item[index]}
+        if (58>item.charCodeAt(index) && item.charCodeAt(index)>47) {
+        value += item[index];
+      }}
+      let num = parseFloat(value);
+      valueArr.push(num);
+      }}
+      console.log(valueArr);
+      return valueArr;    
+    },
+
     template: `
     <div class="item">
     <p><strong>Balance:</strong> $ 400</p>

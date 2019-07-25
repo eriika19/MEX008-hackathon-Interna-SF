@@ -29,23 +29,16 @@ body{
   }
 
   #logo {
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
     margin: 1em;
   }
 
   .content {
-    width: 85vw;
-    max-width: 650px;
-    min-width: 250px;
-  }
-  
-
-/* Main */
-  main {
     display: flex;
     justify-content: center;
     width: 100%;
+    transition: all 0.3s;
   }
 
   .hide {
@@ -84,15 +77,32 @@ footer p {
   font-size: 18px;
 }
 
+
+/*img*/
+
+#piggy-bank {
+  height: 15em;
+  float: right;
+}
+
+#doggy {
+  background-color: transparent;
+
+  float: right !important;
+  border-color: transparent;
+}
+
 /*
+#add {
 color: rgba(31, 204, 126, 0.952);
     color:rgba(8, 165, 94, 0.877);
     color: rgba(65, 34, 179, 0.911);
     color: rgba(39, 204, 44, 0.918);
     color: rgba(43, 179, 47, 0.925);
+} */
 
 
-  }*/
+  
 
 
 
