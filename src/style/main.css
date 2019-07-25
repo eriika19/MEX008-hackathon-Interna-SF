@@ -7,7 +7,6 @@ body{
     font-family: 'Quicksand', sans-serif;
   }
 
-  
   /* Header */
 
   header{
@@ -29,27 +28,62 @@ body{
     color: #343a40
   }
 
+  h3 {
+    font-size: 2.45em !important;
+    padding: .05em .4em !important;
+    font-weight: bold !important;
+  }
+
+  .popover-body {
+    font-size: 1.19em;
+}
+
   #logo {
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
     margin: 1em;
   }
 
-/* Main */
-  main {
+  .content {
     display: flex;
     justify-content: center;
     width: 100%;
+    transition: all 0.3s;
   }
 
   .hide {
     display: none;
   }
 
+/*Start*/
+
+.name {
+text-align: center;
+align-items: center;
+padding-top: 5rem;
+}
+figure{
+  align-items: center;
+  text-align: center;
+  padding-top: 3rem;
+}
+#button-wallet{
+  box-shadow: 10px 5px 5px green;
+  border-radius: 5rem;
+}
+
+#button-wallet:hover{
+  
+  background-color: darkslategrey;
+  border-radius: 5rem;
+}
+
+/* Home */
+
  label, input, select {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.1em;
 }
+
 .tex{
   font-size: x-large;
   font-weight: 900;
@@ -57,15 +91,18 @@ body{
 }
 
 input, select {
+  width: 60%;
   margin: 0 2em 0 0;
-  padding: 5px;
+  padding: 2px;
   border: 2px solid #ced4da;
   border-radius: 4px;
+  font-size: .98em;
 }
 
-label {    
+label {
   margin: 0 .3em 0 0;
   font-weight: bolder;
+  font-size: 1.1em;
 }
 
   /* Footer */
@@ -81,35 +118,28 @@ footer p {
   font-size: 18px;
 }
 
-.name {
-text-align: center;
-align-items: center;
-padding-top: 5rem;
+/*img*/
+
+#piggy-bank {
+  height: 15em;
+  float: right;
 }
-figure{
-  align-items: center;
-  text-align: center;
-  padding-top: 3rem;
+
+#piggy-bank:focus {
+outline-color: transparent !important;
 }
-#button-wallet{
-  box-shadow: 10px 5px 5px green;
-  border-radius: 5rem;
-  
-}
-#button-wallet:hover{
-  
-  background-color: darkslategrey;
-  border
+
 /*
-  #id{
+#add {
 color: rgba(31, 204, 126, 0.952);
     color:rgba(8, 165, 94, 0.877);
     color: rgba(65, 34, 179, 0.911);
     color: rgba(39, 204, 44, 0.918);
     color: rgba(43, 179, 47, 0.925);
+} */
 
 
-  }*/
+  
 
 
 

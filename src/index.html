@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Cookie|Quicksand&display=swap" rel="stylesheet">
+      <!-- Librería Bootstrap-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/esm/popper.min.js">-->
+    <!-- Fuentes-->    
+      <link href="https://fonts.googleapis.com/css?family=Cookie|Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/grid.css">  
     <link rel="stylesheet" href="style/media.css">
     <link rel="stylesheet" href="style/list.css">
+
     <title>$mart $pend</title>
     <link rel="icon" type="image/img" href="img/logo-colors.png">
+
 </head>
 <body>
     <header>
             <img id="logo" src="img/logo.png" alt="logo"> <h1>$mart $pend</h1>
     </header>
-    <main>
-     <section id='first-section' class="content">
+<main>
+       <section id='first-section' class="content">
+                 <div class="row">
+            <div class="col-12">
         <div class= "tex">
     
         <p>La educación financiera es fundamental para manejar las finanzas personales correctamente.
@@ -35,25 +42,54 @@
                  <img src="img\coins (1).png" alt="cartera" width="80rem" height="80 rem">
                 </a>
                </figure>
-      
+                      </div>
+    </div>
         
       </section>
-     
-      <section id="home" class='hide'>
-            <p id="content"class="tex"></p>
-        <div id="list">
-                
-            <user-list></user-list>
+  
+    <section >
+        <div class="row">
+            <div class="col-12">
+                            <div id="list" class="content">
+            <list></list>
+        </div>
+    </div>
+    </div>
+    </section>
 
-            </div>
-            
-     </section>
-    </main>
+    <section>
+        <div class="row">
+            <div class="col-4">
+                
+   <figure id="doggy">
+        <img id="piggy-bank" src="img/pig-coin.png" alt="piggy-bank" data-toggle="popover" data-placement="right" tabindex="0" data-trigger="focus" title="Pro tip" data-content="¡Comencemos!">
+   </figure>
+                </div>
+    </div>
+</section>
+
+
+
+</main>
+
     <footer>
 
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/main.js"></script>
     <script src="js/list.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
 </body>
 </html>

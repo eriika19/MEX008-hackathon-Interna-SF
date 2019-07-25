@@ -1,54 +1,110 @@
+let listUser = localStorage.getItem("list");
+let addBtn;
+let balanceResult = 0;
+
+const printBalance = (arr) => {
+  for (i = 0; i < arr.length; i++) {
+    balanceResult = -arr[i];
+  }
+  console.log(balanceResult);
+  document.getElementById('balance-result').innerHTML = `<strong>Balance:</strong> $'${balanceResult}'`;
+};
+
+const balance = (listUser) => {
+  let valueArr = [];
+  for (let i=0; i < listUser.length; i++) {
+    
+  let element = listUser[i];
+  let values = element.split(" ");
+  for(let counter=0; counter < values.length; counter++) {
+    let item = values[counter];
+      if(!(58>item.charCodeAt(0) && item.charCodeAt(0)>47)) {continue;}
+  let value = '';
+  for (let index=0; index < item.length; index++) {
+    if(item.charCodeAt(index) == 46) {value += item[index];
+      console.log(value);}
+    if (58>item.charCodeAt(index) && item.charCodeAt(index)>47) {
+    value += item[index];
+  }}
+  let num = parseFloat(value);
+  valueArr.push(num);
+  }}
+  console.log(valueArr);
+  printBalance (valueArr);
+  };
+
 /* text input for adding item to checklist */
+
+
+
+
+
 Vue.component('list-input', {
-    data: function() {
-      return { userInput: "" }
-    },
-    template: `
-      <div class="item">
-        <label for="transaction"> Agregar:</label>
-        <select name="transaction" id="transaction">
+  data: function () {
+    return {
+      userInput: ""
+    }
+  },
+  template: `
+      <div id="add-input" class="item">
+      <div id="select-transaction">
+        <label for="transaction-type"> Agregar:</label>
+        <select name="transaction-type" id="transaction-type">
         <option value="gasto">Gasto</option>
         <option value="ingreso">Ingreso</option>
     </select>
-    <label for="categorie"> Categoría:</label>
-    <input id="categorie" type="text" v-model="userInput" @keydown.enter="addTodoItem"></input>
+    </div>
+    <div>
+    <label for="reason"> Razón:</label>
+    <input id="reason" type="text"  @keydown.enter="addTodoItem"></input>
+    </div>
+    <div>
     <label for="amount"> Cantidad:</label>
         <input id="amount" type="text" v-model="userInput" @keydown.enter="addTodoItem"></input>
-        <div class="plus-circle-svg svg-wrapper" @click="addTodoItem">
+        </div>
+        <div id="add-btn" class="plus-circle-svg svg-wrapper" @click="addTodoItem">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
         </div>
       </div>
     `,
-    methods: {
-      addTodoItem: function() {
-        if(this.userInput !== "") {
-          this.todos.push(this.userInput);
-          this.userInput = "";
-        }
+  methods: {
+    addTodoItem: function () {
+      if (this.userInput !== "") {
+        reason = document.getElementById('reason')
+        localStorage.setItem("list", this.todos);
+        this.todos.push(reason.value + ' $' + this.userInput);
+        listUser = this.todos;
+        this.userInput = "";
+        reason.value = "";
+        balance(this.todos);
+        console.log(listUser);
       }
     },
-    props: {
-      todos: Array
-    }
-  });
-  
-  /* shows checklist length */
-  Vue.component('list-stats', {
-    template: `
-    <div class="item">
-      <p>Gastos: {{ todos.length }}</p>
+  },
+  props: {
+    todos: Array
+  }
+});
+
+/* shows length array*/
+Vue.component('list-stats', {
+  template: `
+    <div id="list-stats" class="item">
+    <p id="income">Ingresos: 0</p> <p id="expense">Gastos: {{ todos.length }}</p>
     </div>`,
-    props: {
-      todos: Array
+  props: {
+    todos: Array
+  }
+})
+
+/* each item in checklist */
+Vue.component('list-item', {
+  data: function () {
+    return {
+      isChecked: false
     }
-  })
-  
-  /* each item in checklist */
-  Vue.component('list-item', {
-    data: function() {
-      return { isChecked: false }
-    },
-    template: `
+  },
+  template: `
     <section class="item">
       <div id="checkbox" @click="isChecked = !isChecked">
         <div v-if="!isChecked" class="circle-svg svg-wrapper"> 
@@ -65,28 +121,29 @@ Vue.component('list-input', {
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
       </div>
     </section>`,
-    methods: {
-      removeItem: function(todo) {
-        let trashedItemIndex = this.todos.indexOf(todo)
-        this.todos.splice(trashedItemIndex, 1)
-      }
-    },
-    props: {
-      todo: String,
-      todos: Array
+  methods: {
+    removeItem: function (todo) {
+      let trashedItemIndex = this.todos.indexOf(todo)
+      this.todos.splice(trashedItemIndex, 1)
+      console.log(this.todos);
     }
-  })
-  
-  /* list components */
-  
-  Vue.component('user-list', {
-    data: function() {
-      return {
-        todos: [ 'Comida', 'Transporte', 'Educación', 'Diversión']
-      }
-    },
-    template: `
-    <main>
+  },
+  props: {
+    todo: String,
+    todos: Array
+  }
+})
+
+/* list components */
+
+Vue.component('list', {
+  data: function () {
+    return {
+      todos: ['Comida -$80', 'Transporte -$20', 'Educación -$150']
+    }
+  },
+
+  template: `
       <div id="list-items-wrapper">
         <list-input :todos="todos"></list-input>
         <list-stats :todos="todos"></list-stats>
@@ -97,9 +154,51 @@ Vue.component('list-input', {
           :todos="todos"
         >
         </list-item>
-      </div>
-    </main>`
-  })
-  let vm = new Vue({
-    el: '#list'
-  })
+        <balance></balance>
+      </div>`
+})
+
+/* shows balance */
+Vue.component('balance', {
+
+  methods: {
+    balance: function (listUser) {
+      let valueArr = [];
+      for (let i = 0; i < listUser.length; i++) {
+        let element = listUser[i];
+        let values = element.split(" ");
+        for (let counter = 0; counter < values.length; counter++) {
+          let item = values[counter];
+          if (!(58 > item.charCodeAt(0) && item.charCodeAt(0) > 47)) {
+            continue;
+          }
+          let value = '';
+          for (let index = 0; index < item.length; index++) {
+            if (item.charCodeAt(index) == 46) {
+              value += item[index]
+            }
+            if (58 > item.charCodeAt(index) && item.charCodeAt(index) > 47) {
+              value += item[index];
+            }
+          }
+          let num = parseFloat(value);
+          valueArr.push(num);
+        }
+      }
+      console.log(valueArr);
+      return valueArr;
+    }
+  },
+
+  template: `
+    <div class="item">
+    <p id="balance-result"><strong>Balance:</strong> $200</p>
+    </div>`,
+  props: {
+    todos: Array
+  }
+})
+
+let vm = new Vue({
+  el: '#list'
+})
