@@ -12,7 +12,7 @@ const hideFirstSection = document.getElementById('first-section');
 const getName = () => { 
     hideFirstSection.classList.add('hide');
     showSecondSection.classList.remove('hide');
-       content.innerHTML = 'Bienvenid@' + inputName.value + 'Empecemos a comprar con calidad y conciencia';
+       content.innerHTML = 'Bienvenid@ ' + inputName.value + ' empecemos a comprar con calidad y conciencia.';
     }
 
-
+buttonName.addEventListener('click', () => getName());

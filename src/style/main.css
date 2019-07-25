@@ -6,17 +6,22 @@ font-family: 'Quicksand', sans-serif;*/
 body{
     font-family: 'Quicksand', sans-serif;
   }
+
   
-  /*Header */
+  /* Header */
 
   header{
-      font-family: 'Cookie', cursive;
+    font-family: 'Cookie', cursive;
     background-color: rgba(113, 74, 255, 0.137);
-
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  .hide {
-    display:none;
+  header h1 {
+    padding: 8px;
+    font-size: 4.1em;
   }
     
   h1, h2, h3, h4, h5, h6 {
@@ -24,16 +29,87 @@ body{
     color: #343a40
   }
 
-  .tex{
-    font-family:  'Cookie', cursive;
-    font-size: x-large;
-    font-weight: 800;
-    font-style: italic;
+  #logo {
+    width: 4em;
+    height: 4em;
+    margin: 1em;
   }
- #input-text{
-    width: 60px;
-    height: 20px;
-    font-family:  'Cookie', cursive;
-    text-align: center;
-    
+
+/* Main */
+  main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hide {
+    display: none;
+  }
+
+ label, input, select {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1em;
 }
+.tex{
+  font-size: x-large;
+  font-weight: 900;
+  font-style: italic;
+}
+
+input, select {
+  margin: 0 2em 0 0;
+  padding: 5px;
+  border: 2px solid #ced4da;
+  border-radius: 4px;
+}
+
+label {    
+  margin: 0 .3em 0 0;
+  font-weight: bolder;
+}
+
+  /* Footer */
+
+footer {
+  padding: 3px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.name {
+text-align: center;
+align-items: center;
+padding-top: 5rem;
+}
+figure{
+  align-items: center;
+  text-align: center;
+  padding-top: 3rem;
+}
+#button-wallet{
+  box-shadow: 10px 5px 5px green;
+  border-radius: 5rem;
+  
+}
+#button-wallet:hover{
+  
+  background-color: darkslategrey;
+  border
+/*
+  #id{
+color: rgba(31, 204, 126, 0.952);
+    color:rgba(8, 165, 94, 0.877);
+    color: rgba(65, 34, 179, 0.911);
+    color: rgba(39, 204, 44, 0.918);
+    color: rgba(43, 179, 47, 0.925);
+
+
+  }*/
+
+
+
