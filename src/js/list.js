@@ -1,5 +1,4 @@
 let listUser = localStorage.getItem("list");
-let addBtn;
 let balanceResult = 0;
 
 const printBalance = (arr) => {
@@ -28,10 +27,6 @@ const balance = (listUser) => {
   };
 
 /* text input for adding item to checklist */
-
-
-
-
 
 Vue.component('list-input', {
   data: function () {
@@ -118,7 +113,6 @@ Vue.component('list-item', {
     removeItem: function (todo) {
       let trashedItemIndex = this.todos.indexOf(todo)
       this.todos.splice(trashedItemIndex, 1)
-      console.log(this.todos);
     }
   },
   props: {
@@ -127,7 +121,7 @@ Vue.component('list-item', {
   }
 })
 
-/* list components */
+/* Mostrar items de lista, conteo de items y balance */
 
 Vue.component('list', {
   data: function () {
@@ -151,38 +145,8 @@ Vue.component('list', {
       </div>`
 })
 
-/* shows balance */
+/* Mostrar balance */
 Vue.component('balance', {
-
-  methods: {
-    balance: function (listUser) {
-      let valueArr = [];
-      for (let i = 0; i < listUser.length; i++) {
-        let element = listUser[i];
-        let values = element.split(" ");
-        for (let counter = 0; counter < values.length; counter++) {
-          let item = values[counter];
-          if (!(58 > item.charCodeAt(0) && item.charCodeAt(0) > 47)) {
-            continue;
-          }
-          let value = '';
-          for (let index = 0; index < item.length; index++) {
-            if (item.charCodeAt(index) == 46) {
-              value += item[index]
-            }
-            if (58 > item.charCodeAt(index) && item.charCodeAt(index) > 47) {
-              value += item[index];
-            }
-          }
-          let num = parseFloat(value);
-          valueArr.push(num);
-        }
-      }
-      console.log(valueArr);
-      return valueArr;
-    }
-  },
-
   template: `
     <div class="item">
     <p id="balance-result"><strong>Balance:</strong> $200</p>
