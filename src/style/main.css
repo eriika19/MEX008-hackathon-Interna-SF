@@ -75,18 +75,15 @@ figure{
   align-items: center;
   text-align: center;
   padding-top: 1rem;
-
 }
 
 #button-wallet{
-  
   box-shadow: 10px 5px 5px green;
   border-radius: 5rem;
 }
 
 #button-wallet:hover{
   background-color: darkslategrey;
-  border-radius: 5rem;
 }
 
 #input-name {
@@ -98,16 +95,19 @@ figure{
   font-weight: bold;
 }
 
+.text{
+  font-size: x-large;
+  font-weight: 900;
+  font-style: italic;
+}
 /* Home */
 
  label, input, select {
     font-family: 'Quicksand', sans-serif;
 }
 
-.text{
-  font-size: x-large;
-  font-weight: 900;
-  font-style: italic;
+#greet {
+  text-align-last: center;
 }
 
 input, select {
