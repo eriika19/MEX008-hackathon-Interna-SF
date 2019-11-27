@@ -5,7 +5,7 @@
 ## Índice
 
 - [Introducción](#introducción)
-- [Planteación de problema](#planteación-de-problema)
+- [Planteamiento del problema](#planteamiento-del-problema)
 - [Fundamentos de la solución](#fundamentos-de-la-solución)
 - [Proyecto](#proyecto)
 - [Nicho de mercado](#nicho-de-mercado)
@@ -26,7 +26,7 @@ Para llevar una mejor gestión de las operaciones financieras, con la disrupció
 
 Al mismo tiempo, si bien existen muchas aplicaciones que ayudan a los usuarios a crear un Presupuesto mensual, existe todavía un hueco. No hay aplicaciones que ayuden y eduquen a las personas a planificar sus ingresos, gastos y ahorros con miras a un futuro tanto de corto como de mediano plazo.
 
-## Planteación de problema
+## Planteamiento del problema
 
 En México siete de cada 10 mexicanos enfrentan problemas financieros, al no poder acabar la quincena o enfrentar situaciones en las que sus deudas superan sus ingresos, por lo que algunos expertos te explican por qué se da este fenómeno y cómo puedes enfrentarlo.
 

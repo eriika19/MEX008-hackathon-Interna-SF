@@ -1,43 +1,32 @@
 let listUser = localStorage.getItem("list");
-let addBtn;
 let balanceResult = 0;
 
 const printBalance = (arr) => {
   for (i = 0; i < arr.length; i++) {
-    balanceResult = -arr[i];
+    balanceResult += arr[i];
   }
-  console.log(balanceResult);
-  document.getElementById('balance-result').innerHTML = `<strong>Balance:</strong> $'${balanceResult}'`;
+  document.getElementById('balance-result').innerHTML = `<strong>Balance:</strong> $${balanceResult}`;
 };
 
 const balance = (listUser) => {
   let valueArr = [];
   for (let i=0; i < listUser.length; i++) {
-    
   let element = listUser[i];
   let values = element.split(" ");
   for(let counter=0; counter < values.length; counter++) {
     let item = values[counter];
-      if(!(58>item.charCodeAt(0) && item.charCodeAt(0)>47)) {continue;}
-  let value = '';
+    let amount = '';
+    if (item.charCodeAt(0) > 57) {continue;};
   for (let index=0; index < item.length; index++) {
-    if(item.charCodeAt(index) == 46) {value += item[index];
-      console.log(value);}
-    if (58>item.charCodeAt(index) && item.charCodeAt(index)>47) {
-    value += item[index];
-  }}
-  let num = parseFloat(value);
+    if (item.charCodeAt(index) == 46 || (58>item.charCodeAt(index) && item.charCodeAt(index)>47)) {amount += item[index]}
+  }
+  let num = parseFloat(amount);
   valueArr.push(num);
   }}
-  console.log(valueArr);
   printBalance (valueArr);
   };
 
 /* text input for adding item to checklist */
-
-
-
-
 
 Vue.component('list-input', {
   data: function () {
@@ -77,7 +66,6 @@ Vue.component('list-input', {
         this.userInput = "";
         reason.value = "";
         balance(this.todos);
-        console.log(listUser);
       }
     },
   },
@@ -125,7 +113,6 @@ Vue.component('list-item', {
     removeItem: function (todo) {
       let trashedItemIndex = this.todos.indexOf(todo)
       this.todos.splice(trashedItemIndex, 1)
-      console.log(this.todos);
     }
   },
   props: {
@@ -134,12 +121,12 @@ Vue.component('list-item', {
   }
 })
 
-/* list components */
+/* Mostrar items de lista, conteo de items y balance */
 
 Vue.component('list', {
   data: function () {
     return {
-      todos: ['Comida -$80', 'Transporte -$20', 'Educación -$150']
+      todos: ['Comida $80', 'Transporte $20', 'Educación $150']
     }
   },
 
@@ -158,38 +145,8 @@ Vue.component('list', {
       </div>`
 })
 
-/* shows balance */
+/* Mostrar balance */
 Vue.component('balance', {
-
-  methods: {
-    balance: function (listUser) {
-      let valueArr = [];
-      for (let i = 0; i < listUser.length; i++) {
-        let element = listUser[i];
-        let values = element.split(" ");
-        for (let counter = 0; counter < values.length; counter++) {
-          let item = values[counter];
-          if (!(58 > item.charCodeAt(0) && item.charCodeAt(0) > 47)) {
-            continue;
-          }
-          let value = '';
-          for (let index = 0; index < item.length; index++) {
-            if (item.charCodeAt(index) == 46) {
-              value += item[index]
-            }
-            if (58 > item.charCodeAt(index) && item.charCodeAt(index) > 47) {
-              value += item[index];
-            }
-          }
-          let num = parseFloat(value);
-          valueArr.push(num);
-        }
-      }
-      console.log(valueArr);
-      return valueArr;
-    }
-  },
-
   template: `
     <div class="item">
     <p id="balance-result"><strong>Balance:</strong> $200</p>

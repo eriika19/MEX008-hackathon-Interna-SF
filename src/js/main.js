@@ -19,3 +19,6 @@ const getName = () => {
     };
 
 buttonName.addEventListener('click', () => getName());
+inputName.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {getName();}  
+});
